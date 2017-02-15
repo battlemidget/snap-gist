@@ -1,0 +1,18 @@
+name: gist
+version: '4.5.0'
+summary: Command line interface to gist.github.com
+description: |
+  The gist gem provides a `gist` command that you can use from your terminal to
+  upload content to https://gist.github.com/.
+
+grade: stable #devel # must be 'stable' to release into candidate/stable channels
+confinement: strict #devmode # use 'strict' once you have the right plugs and slots
+
+apps:
+  gist:
+    command: gems/bin/gist
+
+parts:
+  gist:
+    plugin: ruby
+    gems: ['gist']
